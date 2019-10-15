@@ -1,0 +1,94 @@
+#%RAML 0.8
+baseUri: https://mocksvc.mulesoft.com/mocks/2992f816-7dd5-4279-95b1-2293a74712a2
+title: Self Service API
+version: 1.0
+
+/start:
+  displayName: Start JVM
+  post:
+    description: 
+    body: 
+      application/json:
+        example: |
+          {
+                     "appName": "mmsample",
+                      "lifecycle": "dev",
+                      "host": [ "apm-dc03-02", "apm-dc04-02"],
+                      "action": "Start",
+                          "mmc_host": "apmmgmt-dc03-01",
+                           "mmc_server_port": 7200,
+                           "mmc_bind_port": 8000,
+                           "mmc_connector_port": 9000
+                 
+
+          }
+    responses: 
+      200:
+        description: 
+        body: 
+          application/json:
+            example: |
+              {
+              "Status":"Success",
+              "log": "None"
+              }
+  
+/stop:
+  displayName: Stop JVM
+  post:
+    description: 
+    body: 
+      application/json:
+        example: |
+          {
+                     "appName": "mmsample",
+                      "lifecycle": "dev",
+                      "host": [ "apm-dc03-02", "apm-dc04-02"],
+                      "action": "Stop",
+                          "mmc_host": "apmmgmt-dc03-01",
+                           "mmc_server_port": 7200,
+                           "mmc_bind_port": 8000,
+                           "mmc_connector_port": 9000
+               
+
+          }
+    responses: 
+      200:
+        description: 
+        body: 
+          application/json:
+            example: |
+              {
+              "Status":"Success",
+              "log": "None"
+              }
+/restart:
+  displayName: Restart JVM
+  post:
+    description: 
+    body: 
+      application/json:
+        example: |
+          {
+                     "appName": "mmsample",
+                      "lifecycle": "dev",
+                      "host": [ "apm-dc03-02", "apm-dc04-02"],
+                      "action": "Restart",
+                          "mmc_host": "apmmgmt-dc03-01",
+                           "mmc_server_port": 7200,
+                           "mmc_bind_port": 8000,
+                           "mmc_connector_port": 9000
+                   
+
+          }
+    responses: 
+      200:
+        description: 
+        body: 
+          application/json:
+            example: |
+              {
+              "Status":"Success",
+              "log": "None"
+              }
+          
